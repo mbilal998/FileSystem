@@ -5,7 +5,7 @@ const fs = require("fs");
 const path = os.homedir();
 console.log(path);
 
-const saving_path = path + "/" + process.env.doc_name+ '/';
+const saving_path = path + '/' + process.env.doc_name + '/';
 
 const tutorialInfo = () => {
   return "React" + " " + "Node" + " " + os.platform();
@@ -20,7 +20,7 @@ new Promise((resolve, reject) => {
     if (err) {
       reject(err);
     } else {
-        resolve("File created");
+      resolve("File created");
     }
   });
 })
