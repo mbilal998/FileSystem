@@ -1,14 +1,16 @@
-require("dotenv").config();
-const os = require("os");
-const fs = require("fs");
+require('dotenv').config();
+const os = require('os');
+const fs = require('fs');
 
 const path = os.homedir();
 console.log(path);
 
+const nan = 1;
+
 const saving_path = path + '/' + process.env.doc_name + '/';
 
 const tutorialInfo = () => {
-  return "React" + " " + "Node" + " " + os.platform();
+  return 'React' + ' ' + 'Node' + ' ' + os.platform();
 };
 
 if (!fs.existsSync(saving_path)) {
@@ -16,11 +18,11 @@ if (!fs.existsSync(saving_path)) {
 }
 
 new Promise((resolve, reject) => {
-  fs.writeFile(saving_path + "TestingFile.txt", tutorialInfo(), (err, data) => {
+  fs.writeFile(saving_path + 'TestingFile.txt', tutorialInfo(), (err, data) => {
     if (err) {
       reject(err);
     } else {
-      resolve("File created");
+      resolve('File created');
     }
   });
 })
